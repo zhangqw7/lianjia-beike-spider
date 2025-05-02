@@ -8,10 +8,11 @@
 import sys
 
 if sys.version_info < (3, 0):   # 如果小于Python3
-    PYTHON_3 = False
+    PYTHON_3 = False  # 标记为非Python3环境
 else:
-    PYTHON_3 = True
+    PYTHON_3 = True  # 标记为Python3环境
 
 if not PYTHON_3:   # 如果小于Python3
-    reload(sys)
-    sys.setdefaultencoding("utf-8")
+    from importlib import reload  # 导入reload函数
+    reload(sys)  # 重新加载sys模块
+    sys.setdefaultencoding("utf-8")  # 设置默认编码为utf-8，解决中文编码问题

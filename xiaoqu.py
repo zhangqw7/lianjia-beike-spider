@@ -10,5 +10,5 @@
 from lib.spider.xiaoqu_spider import *
 
 if __name__ == "__main__":
-    spider = XiaoQuBaseSpider(SPIDER_NAME)
-    spider.start()
+    spider = XiaoQuBaseSpider(SPIDER_NAME)  # 创建小区爬虫实例
+    spider.start()  # 启动爬虫
